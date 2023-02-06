@@ -1,0 +1,31 @@
+.mainNav {
+  display: flex;
+  align-items: center;
+}
+
+:root {
+  --off-color: red;
+}
+.product main .breadcrumbs,
+.product main img {
+  grid-column: 1/-1;
+}
+
+.breadcrumbs {
+  list-style-type: none;
+  display: flex;
+}
+
+.purchaseBox {
+  background: #d8d8d8;
+  color: var(--background-color);
+  padding: 1rem;
+}
+
+.purchaseBox form label {
+  gap: 1rem;
+}
+
+.product main {
+  display: grid;
+}
