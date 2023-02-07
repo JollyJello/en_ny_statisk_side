@@ -18,6 +18,12 @@ body {
   caret-color: var(--caret-color);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 :root {
   --color: #272727;
   --background-color: white;
