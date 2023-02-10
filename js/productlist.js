@@ -1,17 +1,28 @@
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 
+if (category) {
+  fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
+    .then((res) => res.json())
+    .then(showProducts);
+} else {
+  fetch("https://kea-alt-del.dk/t7/api/products")
+    .then((res) => res.json())
+    .then(showProducts);
+}
+
+/* 
 fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
   .then((res) => res.json())
   .then(showProducts);
-
+*/
 function showProducts(products) {
   //looper og kalder showprodukt
   products.forEach(showProduct);
 }
 
 function showProduct(product) {
-  //console.log(product);
+  console.log(product);
 
   //fange template
   const template = document.querySelector("#smallProductTemplate").content;
